@@ -3,7 +3,9 @@
 
 ## What is it about ?
 
-	Basically, this is my portfolio website, where I constantly upload everything I create there. Feel free to play with them and/or view/copy their source code.
+	Basically, this is my portfolio website, where I constantly upload
+	everything I create there. Feel free to play with them and/or view/copy
+	their source code.
 
 	The webpages/websites in this repository contains:
 
