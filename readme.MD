@@ -1,6 +1,6 @@
 # Visit my website
 	[letscoup](http://www.letscoup.com)
-
+	[lets coup](www.letscoup.com)
 ## What is it about ?
 
 	Basically, this is my portfolio website, where I constantly upload
