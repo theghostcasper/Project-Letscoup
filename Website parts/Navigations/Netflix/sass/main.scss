@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before {
+ margin:0;
+ padding:0;
+ box-sizing:border-box;   
+}
+
+html,
+body {
+    width:100%;
+    height:100%;
+    font-family:'Times New Roman';
+
+}
+.main-nav {
+    color:white;
+    font-size:18px;
+    font-weight: 300;
+    height: 56px;
+    width:100%;
+    background-color:black;
+    display:grid;
+    grid-template-columns: repeat(12,auto);
+    grid-template-areas: 
+        ". logo helpcenter . . . . . . profile . .";
+    align-items:center;
+    justify-items:center;
+
+    &__logo {
+        grid-area:logo;
+        justify-self:right;
+        padding-right:10%;
+        border-right:solid 1px white;
+    }
+    &__page-name {
+        grid-area:helpcenter;
+        justify-self:left;
+        padding-left:10%;
+        text-transform: capitalize;
+    }
+    &__profile {
+        grid-area:profile;
+        padding:5px 10px;
+        transition:background 0.2s;
+        &:hover{
+            background:lighten(black,15%);
+        }
+    }
+}
+a {
+    text-decoration:none;
+    color:inherit;
+    &:hover {
+        text-decoration:underline;
+    }
+}
+
+.fa-sort-down {
+    color:red;
+    font-size:25px;
+}
+.space {
+    height:2000px;
+}

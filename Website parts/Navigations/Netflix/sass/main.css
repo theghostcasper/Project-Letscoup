@@ -1,0 +1,85 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Times New Roman';
+}
+
+.main-nav {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  height: 56px;
+  width: 100%;
+  background-color: black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[12];
+      grid-template-columns: repeat(12, auto);
+      grid-template-areas: ". logo helpcenter . . . . . . profile . .";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.main-nav__logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  padding-right: 10%;
+  border-right: solid 1px white;
+}
+
+.main-nav__page-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: helpcenter;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  padding-left: 10%;
+  text-transform: capitalize;
+}
+
+.main-nav__profile {
+  -ms-grid-row: 1;
+  -ms-grid-column: 10;
+  grid-area: profile;
+  padding: 5px 10px;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.main-nav__profile:hover {
+  background: #262626;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.fa-sort-down {
+  color: red;
+  font-size: 25px;
+}
+
+.space {
+  height: 2000px;
+}
+/*# sourceMappingURL=main.css.map */

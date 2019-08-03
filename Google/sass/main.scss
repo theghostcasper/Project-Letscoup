@@ -1,0 +1,119 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-size:62.5%;
+    max-width:100%;
+    max-height:100%;
+}
+.nav {
+    margin:2rem;
+    font-size:1.5rem;
+    &__items {
+        display:flex;
+        align-content:center;
+        justify-content:flex-end;
+        list-style:none;
+        &--item {
+            display:inline-block;
+            margin-right:2rem;
+            a{
+                text-decoration:none;
+                color:inherit;
+                line-height:30px;
+                &:hover {
+                    text-decoration:underline;
+                }
+            }
+        }
+        &--item:nth-child(3){
+            width:30px;
+            height:30px;
+            background:url('../img/i1_1967ca6a.png');
+            background-position: -132px -38px;
+            a{
+                display:inline-block;
+                width:30px;
+                height:30px;
+            }
+        }
+        &--item:last-child a img {
+            border-radius:50%;
+        }
+    }
+}
+
+.main-body{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:repeat(7,1fr);
+    &__image {
+        margin:auto;
+        width:300px;
+        grid-column: 5/9;
+        grid-row: 3/5;
+        img {
+           max-width:100%;
+        }
+    }
+    &__form {
+        margin:auto;
+        grid-column: 4/10;
+        grid-row:5/7;
+        &--main-input {
+            display:block;
+            width: 495px;
+            position:relative;
+            input {
+                display:block;
+                outline:none;
+                border:1px solid darken(white,10%);
+                width:500px;
+                height:40px;
+                border-radius:20px;
+                padding-right: 5rem;
+                padding-left:2rem;
+            }
+            img {
+                position:absolute;
+                right:0.5em;
+                top:0.5em;
+                width:30px;
+            }
+        }
+        text-align:center;
+        input[type="submit"] {
+            margin-top:3rem;
+            margin-bottom:2rem;
+            padding:1rem 2rem;
+            border:none;
+            background:lighten(grey,44%);
+            color:lighten(black,20%);
+            margin-left:2rem;
+            &:hover{
+                background:lighten(grey,30%);
+            }
+        }
+    }
+    &__language {
+        grid-column: 5/9;
+        grid-row:7/8;
+        margin:auto;
+        font-size:1.5rem;
+    }
+}
+.footer{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    bottom:0;
+    height:70px;
+    width:100%;
+    background:lighten(grey,42%);
+    text-align:center;
+    font-size:1.3rem;
+}

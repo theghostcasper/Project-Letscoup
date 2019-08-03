@@ -1,0 +1,265 @@
+$text-color:rgb(197, 218, 206);
+$background-col:rgba(2, 28, 30, 0.8);
+$background-col2:rgba(0, 70, 71, 0.8);
+*,
+*::after,
+*::before {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: darken($text-color,15%);
+    opacity: 1; /* Firefox */
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    scroll-behavior: smooth;
+}
+html {
+    font-size:62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+nav {    
+    overflow : hidden;
+    position: fixed;
+    top: 0;
+    right:0;
+    text-align:right;
+    z-index: 9999;
+    padding:2rem;
+    background:$background-col;  
+}
+#header {
+    background:linear-gradient(to bottom,$background-col,$background-col2), url('https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fnatalieparletta%2Ffiles%2F2019%2F04%2FAdobeStock_195603050-1200x795.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:95vh;
+    margin:auto;
+    padding:2em;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:flex-start;
+    clip-path: polygon(0 0, 100% 0, 100% 74%, 66% 75%, 100% 100%, 0 100%, 34% 75%, 0 75%);
+}
+#header-img {
+    width:12rem;
+    animation-duration: 5s !important;
+    animation-delay: 3s;
+}
+.nav-link{
+    display:inline-block;
+    padding:1rem 2rem;
+    margin-right:2rem;
+    text-decoration:none;
+    color:$text-color;
+    font-size:2rem;
+    transition:all 0.3s;
+    &:hover{
+        animation:swing 0.5s;
+        text-decoration:underline;
+        color:lighten($text-color, 10%);
+    }
+}
+.header-section {
+    margin-top:2rem;
+    flex-basis: 100%;
+    text-align:center;
+    &__title {
+        position:relative;
+        bottom:5rem;
+        color:$text-color;
+        font-weight:400;
+        font-size: calc(1.5vw + 1.8rem);
+    }
+    &__form {
+        display:flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        input[type='email'] {
+            padding:1rem 2rem;
+            width:32rem;
+            text-align: center;
+            color:$text-color;
+            font-size:2rem;
+            background:transparent;
+            border-radius:50px;
+            border:2px solid $text-color;
+        }
+        input[type='submit']{
+            margin-top:2rem;
+            color:$text-color;
+            padding:1rem 3rem;
+            background:$background-col;
+            font-size:2rem;
+            border:none;
+            border-radius:20px;
+            &:hover{
+                animation: heartBeat 1s;
+            }
+        }
+    }
+
+}
+
+.main {
+    width:95%;
+    margin:auto;
+    &__features{
+        display:grid;
+        grid-template-areas:
+         ". title title . . . img"
+         ". features features . . . img";
+        align-items:center;
+        justify-items:center;
+        grid-gap: 2rem 5rem;
+        margin-top:2rem;
+        &--title{
+            font-size:3rem;
+            grid-area: title;
+            align-self:end;
+        }
+        &--text {
+            grid-area: features;
+            font-size:2rem;
+            align-self:start;
+
+        }
+        &--image{
+            grid-area:img;
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    &__methodology {
+        display:grid;
+        grid-template-areas:
+         ". title title ."
+         ".  text text  ."
+         ".   video video  .";
+        align-items:center;
+        justify-items:center;
+        grid-gap: 2rem 5rem;
+        margin-top:8rem;
+        &--title{ 
+            font-size:3rem;
+            grid-area:title;
+        }
+        &--text{
+            grid-area: text;
+            font-size:2rem;
+        }
+        &--video{
+            grid-area:video;
+            text-align: center;
+            width:100%;
+            height:50rem;
+            iframe{
+                width:100%;
+                height:100%;
+            }
+        }
+    }
+    &__pricing {
+        display:flex;
+        flex-wrap:wrap;
+        font-size: 1.5rem;
+        width: 90%; margin:8rem auto;
+        justify-content:space-around;
+        h2 {
+            flex-basis:100%;
+            text-align:center;
+            font-size:3rem;
+            margin:2rem;
+        }
+        .card {
+            width:300px;
+            margin:2rem;
+            border:1px solid $text-color;
+            &__logo{
+                width:100%;
+                img{
+                    max-width:100%;
+                }
+            }
+            &__info {
+                width:100%;
+            }
+            &__buy {
+                text-align:center;
+                .btn {
+                    padding:1rem 3rem;
+                    margin:2rem;
+                    background:$background-col;
+                    color:$text-color;
+                    border:none;
+                    border-radius:15px;
+                    &:hover{
+                        animation:heartBeat 1s;
+                        background:$background-col2;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+footer {
+    text-align:center;
+    font-size:150%;
+    padding:2rem;
+    background:$background-col;
+    color:$text-color;
+}
+
+
+
+
+
+
+@media screen and (max-width:940px){
+    html {
+        font-size:60%;
+    }
+    #header {
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 90%);
+    }
+}
+@media screen and (max-width:720px){
+    html {
+        font-size:45%;
+    }
+    nav{
+        display:none;
+    }
+    .main__features {
+        grid-template-areas:
+         "img"
+         "title"
+         "features";
+        &--title{
+            grid-area: title;
+        }
+        &--text {
+            grid-area: features;
+        }
+        &--image{
+            grid-area:img;
+        }
+    }
+}
+
+@media screen and (max-width:480px){
+    html {
+        font-size:40%;
+    }
+
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Survey Form</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<article class="header">
+		<h1 id="title" class="header__title">Survey</h1>
+	</article>	
+	<main class="main-body">
+		<p class="main-body--description" id="description">Please fill in the below form and <a href="#submit">click submit</a> button below</p>
+		<form id="survey-form">
+			<label id="name-label" for="name">
+				<span><span class="required">*</span>Name:</span><input required type="text" id="name" name="name" placeholder="please enter your name">
+			</label>
+			<label for="email" id="email-label">
+				<span><span class="required">*</span>Email: </span><input required type="email" id="email" name="email" placeholder="please enter your Email">
+			</label>
+			<label for="number" id="number-label">
+				<span><span class="required">*</span>Age:</span><input required type="number" min="18" max="30" id="number" name="Age" placeholder="Age">
+			</label>
+			<label for="dropdown" id="label-dropdown">
+				Job:
+				<select id="dropdown">
+					<option>Engineer</option>
+					<option>Plumber</option>
+					<option>Serial Killer</option>
+				</select>
+			</label>
+			<label id="label-radio">
+				The speed of light is:
+				<div>
+				<div>3*10^8 m/s.</div><input type="radio" name="radio-btn" value=3>
+				<div>2*10^8 m/s.</div><input type="radio" name="radio-btn" value=2>
+				<div>1*10^8 m/s.</div><input type="radio" name="radio-btn" value="1">
+				</div>
+			</label>
+			<label id="label-checkbox">
+				How much is one dollar:
+				<div>
+					<span>3 LE<input type="checkbox" name="checkbox" value=3></span>
+					<span>17 LE<input type="checkbox" name="checkbox" value=2></span>
+					<span>17 LE<input type="checkbox" name="checkbox" value="1"></span>
+				</div>
+			</label>
+			<label for="textarea">
+				<textarea id="textarea" placeholder="tell us about yourself" name=textarea></textarea>
+			</label>
+			<input type="submit" name="Submit" id="submit">
+		</form>
+	</main>
+
+	<script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+</html>
